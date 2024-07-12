@@ -9,6 +9,7 @@ h1 {
 }
 
 img {
-    width: 200px;
-    height: auto;
+    width: 80%; /* Set the image width to 80% of its parent container */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 1500px; /* Optional: set a maximum width */
 }
