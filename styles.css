@@ -11,5 +11,5 @@ h1 {
 img {
     width: 80%; /* Set the image width to 80% of its parent container */
     height: auto; /* Maintain aspect ratio */
-    max-width: 1500px; /* Optional: set a maximum width */
+    max-width: 1000px; /* Optional: set a maximum width */
 }
