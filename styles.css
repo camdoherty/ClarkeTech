@@ -1,15 +1,126 @@
+:root {
+    --primary-color: #0B5F8B;
+    --secondary-color: #f4f4f4;
+    --text-color: #333;
+    --white: #fff;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 2rem 0;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
-    margin-top: 50px;
 }
 
-h1 {
-    color: #333;
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
 }
 
-img {
-    width: 80%; /* Set the image width to 80% of its parent container */
-    height: auto; /* Maintain aspect ratio */
-    max-width: 1000px; /* Optional: set a maximum width */
+.hero h2 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    max-width: 600px;
+}
+
+.banner {
+    background-color: var(--secondary-color);
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.banner img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+main {
+    padding: 3rem 0;
+}
+
+.services, .offering, .contact {
+    margin-bottom: 3rem;
+}
+
+h3 {
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.services ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    list-style-type: none;
+}
+
+.services li {
+    background: var(--secondary-color);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.services li:hover {
+    transform: translateY(-5px);
+}
+
+.offering p, .contact p {
+    max-width: 600px;
+}
+
+.contact a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+footer {
+    background-color: var(--text-color);
+    color: var(--white);
+    text-align: center;
+    padding: 1rem 0;
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero h2 {
+        font-size: 1rem;
+    }
+
+    .services ul {
+        grid-template-columns: 1fr;
+    }
 }
